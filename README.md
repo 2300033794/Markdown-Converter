@@ -70,6 +70,33 @@ pip install -e 'packages/markitdown[all]'
 
 ## Usage
 
+### Frontend (Streamlit) + Backend (FastAPI)
+
+This repo includes a simple UI that uploads a file and either converts locally or routes the request to the backend API.
+
+**1) Start the backend** (FastAPI)
+
+From the `markitdown/` folder:
+
+```bash
+python -m uvicorn backend:app --host 127.0.0.1 --port 8000
+```
+
+**2) Start the frontend** (Streamlit)
+
+In another terminal:
+
+```bash
+streamlit run app.py --server.address 127.0.0.1 --server.port 8501
+```
+
+**3) Use the UI**
+- Open the Streamlit URL shown in the terminal (default: `http://127.0.0.1:8501`).
+- Upload a document.
+- If **“Use backend when available”** is enabled, the app will call `POST http://127.0.0.1:8000/convert`.
+
+
+
 ### Command-Line
 
 ```bash
@@ -358,3 +385,5 @@ trademarks or logos is subject to and must follow
 [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
 Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
 Any use of third-party trademarks or logos are subject to those third-party's policies.
+#   M a r k d o w n - C o n v e r t e r  
+ 
