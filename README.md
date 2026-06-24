@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Markdown Converter
 
 A Streamlit-based Markdown Converter that converts PDF, DOCX, PPTX, TXT, HTML, CSV, JSON, XML, XLSX, XLS, and Markdown files into Markdown format.
